@@ -1,0 +1,76 @@
+
+body {
+	
+  background-color: yellow;	
+  margin: 0
+  
+}
+@media screen and (min-width: 580px) {
+  body {
+    background-color: cyan;
+  }
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #800000;
+  color: white;
+}
+
+
+
+.container-1{
+	display:flex;
+	flex-basis:27%
+}
+
+
+
+.container-1 div{
+	
+	border:10px #0000ff solid;
+	padding:10px;
+	width: 20%
+	height: 20%
+}
+
+.box-1{
+	
+	flex:2;
+	order:2;
+
+}
+
+
+.box-2{
+	
+	flex:1;
+	order:1;
+
+}
+
+
+table.c {
+  table-layout: fixed;
+  width: 20%;  
+}
