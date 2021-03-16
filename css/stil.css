@@ -20,7 +20,7 @@ a:hover {
 	}
 @media screen and (min-width: 580px) {
   a:hover {
-		color: yellow;
+		color: orange;
 	}
 }
 
@@ -33,6 +33,7 @@ p {
   p {
 		color: yellow;
 	}
+	
 }
 
 
