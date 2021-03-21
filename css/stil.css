@@ -7,7 +7,7 @@ body {
 }
 @media screen and (min-width: 580px) {
   body {
-    background-color: cyan;
+    background-color: #446666;
 	
 	
 	
@@ -20,7 +20,7 @@ a:hover {
 	}
 @media screen and (min-width: 580px) {
   a:hover {
-		color: orange;
+		color: red;
 	}
 }
 
@@ -31,7 +31,7 @@ p {
 }
 @media screen and (min-width: 580px) {
   p {
-		color: yellow;
+		color: orange;
 	}
 	
 }
@@ -40,12 +40,12 @@ p {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #ff8800;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -53,13 +53,13 @@ p {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #33ccee;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #800000;
-  color: white;
+  background-color: #440099;
+  color: #ff8800;
 }
 
 
@@ -98,4 +98,13 @@ p {
 table.c {
   table-layout: fixed;
   width: 20%;  
+}
+
+
+
+nav{
+	float: right;
+	width: 30%;
+	height: 300px;
+	padding: 10px;
 }
