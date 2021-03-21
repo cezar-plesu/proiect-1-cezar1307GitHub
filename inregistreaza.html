@@ -27,31 +27,25 @@
   <fieldset>
     <legend>Informații generale:</legend>
 	
+	<pre>
+    <label for="nuti">Nume utilizator:</label><input type="text" id="nuti" name="nuti">
 	
-    <label for="nuti">Nume utilizator:</label>
-    <input type="text" id="nuti" name="nuti"><br><br>
+	<label for="password">Parola:</label>     <input type="password" id="password" name="password">
 	
-    <label for="password">Parola:</label>
-    <input type="password" id="password" name="password"><br><br>
-	
-	<label for="fname">Prenume:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Nume:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-	
-	
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
+	<label for="fname">Prenume:</label>    <input type="text" id="fname" name="fname">
     
+	<label for="lname">Nume:</label>       <input type="text" id="lname" name="lname">
 	
-	<label for="tel">Telefon:</label>
-    <input type="tel" id="tel" name="tel"><br><br>
 	
+	<label for="email">Email:</label>      <input type="email" id="email" name="email"><br><br>
+    
+	<label for="tel">Telefon:</label>    <input type="tel" id="tel" name="tel"><br><br>
+	</pre>
     
   </fieldset>
   
   
-  
+
   <fieldset>
     <legend>Informații personale:</legend>
 	
@@ -107,7 +101,7 @@
 	<div>
     <p>
         <label>Varsta:</label>
-        <input type="range" id="Age" value="50" min="1" max="100" 
+        <input type="range" id="Age" value="50" min="18" max="90" 
             oninput="document.getElementById('Varsta').innerHTML = this.value" />
         <label id="Varsta"></label>
     </p>
