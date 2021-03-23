@@ -108,3 +108,11 @@ nav{
 	height: 300px;
 	padding: 10px;
 }
+
+centrat {
+  text-align: center;
+}
+
+dreapta {
+  text-align: right;
+}
