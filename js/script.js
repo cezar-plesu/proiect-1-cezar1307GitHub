@@ -82,28 +82,18 @@ function drawFig(){
 	var canvas = document.getElementById("desenare");
 	var ctx = canvas.getContext("2d");
 	
-	var ump = document.getElementById("umplere").value;
+	ctx.strokeStyle = document.getElementById("contur").value;
+	ctx.fillStyle = document.getElementById("umplere").value;
 
 	
-	ctx.fillStyle =ump;
 	
-	var xp = getMousePositionX("desenare",onclick);
-	var yp = getMousePositionY("desenare",onclick);
-
-	ctx.fillRect(xp,yp,100,30);
+	
+	
+	ctx.strokeRect(0,0,200,60);
+	ctx.fillRect(0,0,200,60);
 
 	
 		
 }
 
-function getMousePositionX(canvas, event) {
-            let rect = canvas.getBoundingClientRect();
-            let x = event.clientX - rect.left;
-            return x;
-        }
 
-function getMousePositionY(canvas, event) {
-            let rect = canvas.getBoundingClientRect();
-            let y = event.clientY - rect.top;
-            return y;
-        }
