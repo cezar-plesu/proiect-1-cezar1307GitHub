@@ -1,8 +1,14 @@
 import socket
 
+
+
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversocket.bind(('', 5678))
 serversocket.listen(10)
+
+
+
+
 
 while True:
     print('#########################################################################')
@@ -23,17 +29,23 @@ while True:
             linieDeStart = cerere[0:pozitie]
             print('S-a citit linia de start din cerere: ##### ' + linieDeStart + ' #####')
             break
+
     print('S-a terminat cititrea.')
+
+
 
 
     path = "../continut" + linieDeStart.split(" ")[1]
 
-
-    cerere = "Hello world -"+cerere;
-
+    tip = cerere.split("\n")
 
 
-    clientsocket.send(bytes('Hello world', 'utf-8'))
+    mesaj = "HTTP/1.1 200 OK \r\n"+"Content-Length:"+"\r\n"+"Content-Type:"+"\r\n"+"\r\n"+"Hello world "+tip[0]+"\r\n"
+
+
+    clientsocket.send(bytes(mesaj.encode('utf-8')))  # genereaza un raspuns invalid pe pagina web
+
+
 
     clientsocket.close()
 
