@@ -39,7 +39,7 @@ while True:
     tip = cerere.split("\n")
 
 
-    mesaj = "HTTP/1.1 200 OK \r\n"+"Hello world "+tip[0]+"\r\n"
+    mesaj = "HTTP/1.1 200 OK \r\n"+"Content-Length:"+str(len("Hello world "+tip[0]))+"\r\n"+"\r\n"+"Hello world "+tip[0]+"\r\n"
 
 
     clientsocket.send(bytes(mesaj.encode('utf-8')))
@@ -48,11 +48,11 @@ while True:
         fisier = linieDeStart.split(" ")[1]
         path = "../continut" + fisier
         f = open(path)
-        mesaj = "HTTP/1.1 200 OK \r\n"  + "File not found" + "\r\n"
-        clientsocket.send(bytes(mesaj.encode('utf-8')))
+
+
 
     except:
-        mesaj = "HTTP/1.1 200 OK \r\n" +  + "\r\n"  + "File not found"+ "\r\n"
+        mesaj = "HTTP/1.1 200 OK \r\n" + "Content-Length:"  + "\r\n" + "\r\n" + "File not found"+ "\r\n"
 
         clientsocket.send(bytes(mesaj.encode('utf-8')))
 
