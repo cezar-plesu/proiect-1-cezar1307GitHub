@@ -9,6 +9,7 @@ function timp()
 
 
 function setTime(){
+	alert("ceva");
     document.getElementById("date_time").innerHTML=new Date();
 	
 	
@@ -97,3 +98,17 @@ function drawFig(){
 }
 
 
+function schimbaContinut(nume)
+{
+		var httpOpen = new XMLHttpRequest();
+		httpOpen.onreadystatechange=function(){
+			if(this.readyState == 4 && this.status ==200){
+				document.getElementById("continut").innerHTML = this.responseText;
+				
+			}
+		
+		};
+		
+		httpOpen.open("GET",nume +".html");
+		httpOpen.send();
+}

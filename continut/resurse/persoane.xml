@@ -1,5 +1,20 @@
 
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persoane[
+<!ELEMENT persoane (persoana)>
+<!ELEMENT persoana (nume,prenume,varsta,adresa)>
+<!ELEMENT adresa (strada,numar,localitate,judet,tara)>
+<!ELEMENT nume (#PCDATA)>
+<!ELEMENT prenume (#PCDATA)>
+<!ELEMENT varsta (#PCDATA)>
+<!ELEMENT strada (#PCDATA)>
+<!ELEMENT numar (#PCDATA)>
+<!ELEMENT localitate (#PCDATA)>
+<!ELEMENT judet (#PCDATA)>
+<!ELEMENT tara (#PCDATA)>
+
+
+]>
 <persoane>
     <persoana id="1">
         <nume>Popescu</nume>
@@ -14,4 +29,3 @@
         </adresa>
     </persoana>
 </persoane>
->
