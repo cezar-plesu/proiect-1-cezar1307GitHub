@@ -9,9 +9,8 @@ function timp()
 
 
 function setTime(){
-	alert("ceva");
-    document.getElementById("date_time").innerHTML=new Date();
 	
+    document.getElementById("date_time").innerHTML=new Date();
 	
 }
 
@@ -98,17 +97,84 @@ function drawFig(){
 }
 
 
-function schimbaContinut(nume)
+function schimbaContinut(nume,jsFisier,jsFunctie)
 {
 		var httpOpen = new XMLHttpRequest();
 		httpOpen.onreadystatechange=function(){
 			if(this.readyState == 4 && this.status ==200){
 				document.getElementById("continut").innerHTML = this.responseText;
-				
+
+	
+				if (jsFisier) {
+					var elementScript = document.createElement('script');
+					elementScript.onload = function () {
+						console.log("hello");
+						if (jsFunctie) {
+							window[jsFunctie]();
+							}
+						};
+					elementScript.src = jsFisier;
+					document.head.appendChild(elementScript);
+					} else {
+						if (jsFunctie) {
+							window[jsFunctie]();
+						}
+					}
+			
+
+			
 			}
 		
 		};
 		
 		httpOpen.open("GET",nume +".html");
 		httpOpen.send();
+}
+
+
+
+var last_nav ;
+
+
+
+function get_nav_active(a_nav) {
+	
+	if (last_nav)
+	{
+		last_nav.classList.remove("active")
+		last_nav.classList.add("inactive");
+		
+		
+	}
+	last_nav = a_nav;
+	a_nav.classList.add("active");
+}
+
+function check_user() {
+	var name = document.getElementById("name").value;
+	var password = document.getElementById("password").value;
+	
+	var xhttp = new XMLHttpRequest();
+
+	xhttp.onreadystatechange=function()
+	{
+		if(this.readyState == 4 && this.status == 200)
+		{
+			var users = JSON.parse(this.responseText)
+			for( i = 0 ;i<users.length;++i)
+			{
+				if(name === users[i].utilizator && password === users[i].parola)
+				{
+					document.getElementById("detalii").innerHTML = "Autentificare reusita";
+				}
+				else
+				{
+					document.getElementById("detalii").innerHTML = "Autentificare esuata";
+				}
+			}
+		}
+	};
+	xhttp.open("GET","/resurse/utilizatori.json");
+	xhttp.send();	
+	
 }

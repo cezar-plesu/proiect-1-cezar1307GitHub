@@ -1,8 +1,8 @@
-
 <?xml version="1.0" encoding="UTF-8" ?>
+
 <!DOCTYPE persoane[
 <!ELEMENT persoane (persoana)>
-<!ELEMENT persoana (nume,prenume,varsta,adresa)>
+<!ELEMENT persoana (nume,prenume,varsta,adresa,meserie)>
 <!ELEMENT adresa (strada,numar,localitate,judet,tara)>
 <!ELEMENT nume (#PCDATA)>
 <!ELEMENT prenume (#PCDATA)>
@@ -12,20 +12,35 @@
 <!ELEMENT localitate (#PCDATA)>
 <!ELEMENT judet (#PCDATA)>
 <!ELEMENT tara (#PCDATA)>
-
+<!ELEMENT meserie (#PCDATA)>
 
 ]>
+
+
 <persoane>
     <persoana id="1">
-        <nume>Popescu</nume>
-        <prenume>Ion</prenume>
-        <varsta>23</varsta>
+        <nume>John</nume>
+        <prenume>Vasile</prenume>
+        <varsta>41</varsta>
         <adresa>
-            <strada>bd. Chimiei</strada>
-            <numar>2</numar>
+            <strada>Chimiei</strada>
+            <numar>22</numar>
             <localitate>Vaslui</localitate>
             <judet>Vaslui</judet>
             <tara>Romania</tara>
         </adresa>
     </persoana>
+
+    <persoana id="2">
+            <nume>Manea</nume>
+            <prenume>Sava</prenume>
+            <varsta>87</varsta>
+            <adresa>
+                <strada>Unirii</strada>
+                <numar>2</numar>
+                <localitate>Iasi</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+        </persoana>
 </persoane>

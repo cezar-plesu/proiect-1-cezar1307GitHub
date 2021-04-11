@@ -1,11 +1,9 @@
-
-
 <centrat>
-<form action="/action_page.php">
-  <fieldset>
-    <legend>Informații generale:</legend>
-	
-	<pre>
+	<form action="/action_page.php">
+		<fieldset>
+			<legend>Informații generale:</legend>
+
+			<pre>
     <label for="nuti">Nume utilizator:</label><input type="text" id="nuti" name="nuti">
 	
 	<label for="password">Parola:</label>     <input type="password" id="password" name="password">
@@ -19,25 +17,25 @@
     
 	<label for="tel">Telefon:</label>    <input type="tel" id="tel" name="tel"><br><br>
 	</pre>
-    
-  </fieldset>
-  </centrat>
-  
-	<centrat>
-  <fieldset>
-    <legend>Informații personale:</legend>
-	
-	
-   
-	
-	<label for="ips">Sexul:</label><br>  
-	<select name="sex" id="sex">
-		<option value="M">Masculin</option>
-		<option value="F">Feminin</option>
-		
-	</select><br><br>
-	
-	<label for="browser">Mancarea preferata:</label><br>  
+
+		</fieldset>
+</centrat>
+
+<centrat>
+	<fieldset>
+		<legend>Informații personale:</legend>
+
+
+
+
+		<label for="ips">Sexul:</label><br>
+		<select name="sex" id="sex">
+			<option value="M">Masculin</option>
+			<option value="F">Feminin</option>
+
+		</select><br><br>
+
+		<label for="browser">Mancarea preferata:</label><br>
 		<input list="browsers" name="browser" id="browser">
 
 		<datalist id="browsers">
@@ -46,72 +44,68 @@
 			<option value="Carne">
 			<option value="Dulciuri">
 			<option value="Fast Food">
-			
+
 		</datalist><br><br>
-		
-		
-	
-	<label for="ipc">Culoarea preferata:</label><br>  
-	<select>
-		<option style="color:#FF0000">Red 
-		<option style="color:#0066cc">Blue 
-		<option style="color:#66ff33">Cyan
-		<option style="color:#ff66cc">Pink
-		<option style="color:#ffff00">Yellow
-	</select><br><br>
-	
-	
-	<label for="start">Data nastere:</label>
-	<br>  
-		<input type="date" id="start" name="trip-start"
-		value="2000-07-22"
-		min="1900-01-01" max="2021-12-31"><br><br>
-	
 
 
-	<label for="appt">Ora nasterii: </label>
-	<br>  
-		<input type="time" id="appt" name="appt"
-			min="00:00" max="24:00" required>
-    <br>  
-	
-	
-	<div>
-    <p>
-        <label>Varsta:</label>
-        <input type="range" id="Age" value="50" min="18" max="90" 
-            oninput="document.getElementById('Varsta').innerHTML = this.value" />
-        <label id="Varsta"></label>
-    </p>
-    
-       
-    
-</div>
-	
-	
-	
-	
-	 <br><br>
-	<label for="w3review">Descriere:</label><br>
-	<textarea id="w3review" name="w3review" rows="4" cols="50">
+
+		<label for="ipc">Culoarea preferata:</label><br>
+		<select>
+			<option style="color:#FF0000">Red
+			<option style="color:#0066cc">Blue
+			<option style="color:#66ff33">Cyan
+			<option style="color:#ff66cc">Pink
+			<option style="color:#ffff00">Yellow
+		</select><br><br>
+
+
+		<label for="start">Data nastere:</label>
+		<br>
+		<input type="date" id="start" name="trip-start" value="2000-07-22" min="1900-01-01" max="2021-12-31"><br><br>
+
+
+
+		<label for="appt">Ora nasterii: </label>
+		<br>
+		<input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+		<br>
+
+
+		<div>
+			<p>
+				<label>Varsta:</label>
+				<input type="range" id="Age" value="50" min="18" max="90"
+					oninput="document.getElementById('Varsta').innerHTML = this.value" />
+				<label id="Varsta"></label>
+			</p>
+
+
+
+		</div>
+
+
+
+
+		<br><br>
+		<label for="w3review">Descriere:</label><br>
+		<textarea id="w3review" name="w3review" rows="4" cols="50">
 	</textarea><br><br>
-	
-	
-  </fieldset>
-  </centrat>
-  <br><br>
-  <button type="button" disabled>Înregistrează!</button>
-  <br><br>
-  
-  
+
+
+	</fieldset>
+</centrat>
+<br><br>
+<button type="button" disabled>Înregistrează!</button>
+<br><br>
+
+
 </form>
 
 
 
 
 <form method="get" action="file:///D:/AN3/pw/proiect-1-cezar1307GitHub/desen.html">
-    <button type="submit">Desene</button>
+	<button type="submit">Desene</button>
 </form>
 
-<a  onclick="schimbaContinut('inregistreaza')">aaa</a>
-
+<a onclick="schimbaContinut('inregistreaza')">aaa</a>

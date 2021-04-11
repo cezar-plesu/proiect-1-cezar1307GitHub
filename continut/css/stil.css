@@ -57,9 +57,17 @@ p {
   color: black;
 }
 
-.topnav a.active {
+.active {
   background-color: #440099;
   color: #ff8800;
+}
+.inactive{
+  float: left;
+  color: #ff8800;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 
