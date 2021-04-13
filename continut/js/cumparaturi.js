@@ -16,8 +16,10 @@ function adauga() {
     var id = localStorage.length + 1;
     produs = new Produs(id, nume, cant);
 
+    var w = new Worker("worker.js");
     localStorage.setItem(id, produs.print());
-    alert("1");
+    
 
-
+    w.terminate();
+    w = undefined;
 }
